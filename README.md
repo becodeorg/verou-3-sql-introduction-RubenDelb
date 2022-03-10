@@ -16,8 +16,13 @@ WHERE
     groups.name = 'verou-1';
 
 ### Introduce a new field status which can contain a long text indicating the reason for postponing (bonus points if it's a creative one)
+- ALTER TABLE `groups` ADD status TEXT;
 - UPDATE `groups` SET status = 'The class has been postponed by 2 months because the coaches are too worried about the heavy snowfall in mid-summer.' WHERE id = 1;
-
 
 ### Delete someone from the learners table:
 - DELETE FROM learners WHERE id = 5;
+
+### 
+- ALTER TABLE `groups` ADD coach_id int AFTER id;
+- ALTER TABLE `learners` ADD group_id int AFTER id;
+- WIP
